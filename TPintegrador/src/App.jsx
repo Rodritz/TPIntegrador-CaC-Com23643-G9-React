@@ -16,7 +16,7 @@ export const App = () =>{
       </header>
       <Routes>
         <Route path="/" element ={<LandingPage/>}/>
-        <Route path="/trago/:tragoId" element ={<DetalleDrink/>}/>
+        <Route path="/trago/:tragoId" element ={<DetalleTrago/>}/>
       </Routes>
     </BrowserRouter>
   )

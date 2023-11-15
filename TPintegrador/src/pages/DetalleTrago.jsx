@@ -48,7 +48,7 @@ export const DetallePelicula=()=>{
                 {pelicula.production_companies.map((company)=>company.name).join(" - ")}
                 {/* <img src={compania} alt={compania} /> */}
             </p>
-
+            
             </div>
         </div>
 
