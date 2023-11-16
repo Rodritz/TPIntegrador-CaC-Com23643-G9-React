@@ -9,4 +9,5 @@ Currently, two official plugins are available:
 
 
 https://www.thecocktaildb.com/api.php
+https://virag-ky.github.io/Cocktails/
 
