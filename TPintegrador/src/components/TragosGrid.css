@@ -1,4 +1,4 @@
-.moviesGrid{
+.drinksGrid{
     display: grid;
     grid-template-columns: repeat(auto-fill,230px);
     gap: 40px;
@@ -7,7 +7,7 @@
 }
 
 @media (max-width:560px){
-    .moviesGrid{
+    .drinksGrid{
         grid-template-columns: 100%;
     }
 }

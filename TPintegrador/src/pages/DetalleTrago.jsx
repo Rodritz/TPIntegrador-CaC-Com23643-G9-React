@@ -1,56 +1,40 @@
 import { get } from "../../utils/httpCliente";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "./DetalleTrago.css"
 
-import "./DetallePelicula.css"
+export const DetalleTrago = () => {
+  const [drink, setTrago] = useState(null);
+  const { idDrink } = useParams();
 
-export const DetallePelicula=()=>{
+  useEffect(() => {
+    get(`/lookup.php?i=${idDrink}`).then((data) => {
+ /*      console.log(data); */
+ setTrago(data?.drinks?.[0]); 
+    });
+  }, [idDrink]);
 
-    const [pelicula,setPelicula] = useState(null)
-    const{peliculaId} = useParams()
+  if (!drink) {
+    return null;
+  }
 
-    useEffect(()=>{
-        get(`/movie/${peliculaId}`).then((data)=>{
-            /* console.log(data); */
-            setPelicula(data);
-        });
-    },[peliculaId])
-
-    if(!pelicula){
-        return null
-    }
-
-    const imgUrl = `https://image.tmdb.org/t/p/w300${pelicula.poster_path}`
-    /* const compania = `https://image.tmdb.org/t/p/w300${pelicula.production_companies[2].logo_path}`; */ 
-    
-    return(
-        <div className="contenedorDetalle">
-            <img className="col"  src={imgUrl} alt={pelicula.poster_path} />
-            <div className="peliculaDetalle col">
-            <p className="item">
-                <strong>Titulo: </strong>
-                {pelicula.title}
-            </p> 
-            <p>
-                <strong>Descripcion: </strong>
-                {pelicula.overview}
-            </p>  
-            <p>
-                <strong>Generos: </strong>
-                {pelicula.genres.map((genre)=>genre.name).join(" - ")}
-            </p>
-            <p>
-                <strong>Fecha de lanzamiento: </strong>
-                {pelicula.release_date}
-            </p>
-            <p>
-                <strong>Paises donde se estreno: </strong>
-                {pelicula.production_companies.map((company)=>company.name).join(" - ")}
-                {/* <img src={compania} alt={compania} /> */}
-            </p>
-            
-            </div>
-        </div>
-
-    );
+  return (
+    <div className="contenedorDetalle"> 
+     <img className="col" src={drink.strDrinkThumb} alt={drink.strDrink} />
+      <div className="tragoDetalle col">
+        <p className="item">
+          <strong>Titulo:</strong>
+          {drink.strDrink}
+        </p>
+        <p>
+          <strong>Instrucciones</strong>
+          {drink.strInstructionsES}
+        </p>
+        <p>
+            <strong>Categoria:</strong>
+            {drink.strCategory}
+        </p>
+      </div>
+    </div>
+  );
 };
