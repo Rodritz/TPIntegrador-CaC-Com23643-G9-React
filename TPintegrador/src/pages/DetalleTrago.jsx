@@ -2,55 +2,44 @@ import { get } from "../../utils/httpCliente";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import "./DetallePelicula.css"
+import "./DetalleTrago.css"
 
-export const DetallePelicula=()=>{
 
-    const [pelicula,setPelicula] = useState(null)
-    const{peliculaId} = useParams()
+export const DetalleTrago = () => {
+  const [drink, setTrago] = useState(null);
+  const { IdDrink } = useParams();
 
-    useEffect(()=>{
-        get(`/movie/${peliculaId}`).then((data)=>{
-            /* console.log(data); */
-            setPelicula(data);
-        });
-    },[peliculaId])
+  useEffect(() => {
+    get(`/lookup.php?i=${IdDrink}`).then((data) => {
+ /*      console.log(data); */
+      setTrago(data);
+    });
+  }, [IdDrink]);
 
-    if(!pelicula){
-        return null
-    }
+  if (!drink) {
+    return null;
+  }
 
-    const imgUrl = `https://image.tmdb.org/t/p/w300${pelicula.poster_path}`
-    /* const compania = `https://image.tmdb.org/t/p/w300${pelicula.production_companies[2].logo_path}`; */ 
-    
-    return(
-        <div className="contenedorDetalle">
-            <img className="col"  src={imgUrl} alt={pelicula.poster_path} />
-            <div className="peliculaDetalle col">
-            <p className="item">
-                <strong>Titulo: </strong>
-                {pelicula.title}
-            </p> 
-            <p>
-                <strong>Descripcion: </strong>
-                {pelicula.overview}
-            </p>  
-            <p>
-                <strong>Generos: </strong>
-                {pelicula.genres.map((genre)=>genre.name).join(" - ")}
-            </p>
-            <p>
-                <strong>Fecha de lanzamiento: </strong>
-                {pelicula.release_date}
-            </p>
-            <p>
-                <strong>Paises donde se estreno: </strong>
-                {pelicula.production_companies.map((company)=>company.name).join(" - ")}
-                {/* <img src={compania} alt={compania} /> */}
-            </p>
-            
-            </div>
-        </div>
+  const imgURL = `https://www.thecocktaildb.com/images/media/drink/${drink.strDrinkThumb}`;
 
-    );
+
+  return (
+    <div className="contenedorDetalle"> 
+      <img className="col" src={imgURL} alt={drink.strDrink} />
+      <div className="tragoDetalle col">
+        <p className="item">
+          <strong>Titulo:</strong>
+          {drink.strDrink}
+        </p>
+        <p>
+          <strong>Instrucciones</strong>
+          {drink.strInstructionsES}
+        </p>
+        <p>
+            <strong>Categoria:</strong>
+            {drink.strCategory}
+        </p>
+      </div>
+    </div>
+  );
 };
