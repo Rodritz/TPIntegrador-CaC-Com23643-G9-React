@@ -10,14 +10,16 @@ export const App = () =>{
     <BrowserRouter>
     {/* <HomeNavbar/>  */}
       <header>      
-        <Link to="/">
-          <h1 className="title">DRINKS</h1>
+        <Link to="/" className="link-style">
+        <h2 className="section-title">Cocktails</h2>
         </Link>
       </header>
+      <body>
       <Routes>
         <Route path="/" element ={<LandingPage/>}/>
         <Route path="/drink/:idDrink" element ={<DetalleTrago/>}/>
       </Routes>
+      </body>
     </BrowserRouter>
   )
 }

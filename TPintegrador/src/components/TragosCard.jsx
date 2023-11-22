@@ -5,10 +5,13 @@ export const TragosCard = ({drink})=>{
    
     const imgURL = drink.strDrinkThumb;
     return (
+       
         <li className="drinksCard">
-            <Link to={`/drink/${drink.idDrink}`}>
-            <img className="drinkImage" src={imgURL} alt={drink.strCategory} />
-            <div>{drink.strDrink}</div>
+            <Link className="link-style" to={`/drink/${drink.idDrink}`}>
+            <img src={imgURL} alt={drink.strCategory} />
+            <p>
+        <span className="drink-data">{drink.strDrink}</span>
+        </p>
             </Link>
         </li>
     )
