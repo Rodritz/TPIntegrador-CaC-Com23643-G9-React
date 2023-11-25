@@ -1,5 +1,7 @@
-import { TragosGrid } from "../components/TragosGrid"
+import {DrinksGrid} from "../components/DrinksGrid"
 
-export const LandingPage =()=>{
-    return <TragosGrid/>
+export const LandinPage = () =>{
+    return (
+        <DrinksGrid />
+    )
 }
