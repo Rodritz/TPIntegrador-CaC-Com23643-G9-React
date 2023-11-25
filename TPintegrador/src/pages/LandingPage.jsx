@@ -1,6 +1,6 @@
 import {DrinksGrid} from "../components/DrinksGrid"
 
-export const LandinPage = () =>{
+export const LandingPage = () =>{
     return (
         <DrinksGrid />
     )
