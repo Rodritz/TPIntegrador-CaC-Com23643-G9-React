@@ -1,0 +1,40 @@
+.logo-image {
+    width:auto;
+    height:5.5em;
+  }
+
+.mx-auto {
+    font-size: xx-large;
+    color:aliceblue;
+}
+
+
+.bg-body-tertiary {
+    background-color: rgba(30, 30, 30, 0.2) !important; /* Change the last value (0.7) for the desired transparency level */
+  }
+
+  .drinksSearch{
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill,230px) !important;
+    gap: 40px !important;
+    padding: 40px !important;
+    justify-content: center !important;
+    text-decoration: none;
+}
+
+@media (max-width:560px ){
+    .drinksSearch{
+        grid-template-columns: 100% !important;
+    }
+}
+
+.drink-image {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin-bottom: 20px; 
+  }
+  
+  
+  
+  

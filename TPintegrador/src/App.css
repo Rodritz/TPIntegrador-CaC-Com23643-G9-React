@@ -42,3 +42,8 @@
   color: #888;
 }
 
+body {
+  background-color: black !important; /* Change to the desired shade of grey */
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+}

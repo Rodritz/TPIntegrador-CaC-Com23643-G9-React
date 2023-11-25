@@ -1,8 +1,10 @@
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./app.css";
-import { LandinPage } from "./pages/LandingPage";
+import { LandingPage } from "./pages/LandingPage";
 import { DetalleTragos } from "./pages/DetalleTragos";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Navbar from "./components/NavBar"; 
+
 
 
 export const App = () => {
@@ -11,13 +13,11 @@ export const App = () => {
 
     return (
         <BrowserRouter>
-            <header >
-                <Link to="/" className="title">
-                    <h1 className="title">THE COCKTAIL DB</h1>
-                </Link>
-            </header>
+         <div>
+          <Navbar /> {Navbar}
+         </div>
             <Routes>
-                <Route path="/" element={<LandinPage />} />
+                <Route path="/" element={<LandingPage />} />
                 <Route path="/drink/:idDrink" element={<DetalleTragos />} />
 
             </Routes>
