@@ -1,8 +1,26 @@
-# React + Vite
+# TPIntegrador-CaC-Com23643-G9-React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Descripcion 
+Una Aplicacion web dedicado a proporcionar información, recetas y recursos relacionados con cocteles. Su funcionalidad principal es ofrecer una selección específica de cócteles
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+Permite a los usuarios explorar una variedad de cócteles mediante filtros, categorías (como cócteles clásicos, sin alcohol, de temporada, etc.) o mediante una barra de búsqueda.
+
+## Clonar Repositorio
+
+```bash
+git clone https://github.com/Rodritz/TPIntegrador-CaC-Com23643-G9-React.git
+```
+
+## Instalar Dependencias
+
+```bash
+npm install
+```
+
+## Inicar el servidor de desarrollo 
+
+```bash
+npm run dev # http://localhost:5173/
+```
