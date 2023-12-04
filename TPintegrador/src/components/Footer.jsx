@@ -1,6 +1,6 @@
 import Brand from "../img/svg/logo-no-background.svg";
 
-export default function Footer() {
+export const Footer = () => {
   return (
     <div className="container">
       <footer className="d-flex justify-content-between align-items-center my-4 border-top">

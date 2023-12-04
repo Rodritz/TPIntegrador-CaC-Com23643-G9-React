@@ -4,23 +4,18 @@ import { LandingPage } from "./pages/LandingPage";
 import { DetalleTragos } from "./pages/DetalleTragos";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Navbar from "./components/NavBar"; 
-
-
+import {Footer} from "./components/Footer";
 
 export const App = () => {
 
-
-
     return (
         <BrowserRouter>
-         <div>
-          <Navbar /> {Navbar}
-         </div>
+            <Navbar /> 
             <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/drink/:idDrink" element={<DetalleTragos />} />
-
             </Routes>
+            <Footer />
         </BrowserRouter >
     )
 };
