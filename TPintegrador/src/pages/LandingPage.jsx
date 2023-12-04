@@ -1,7 +1,12 @@
-import {DrinksGrid} from "../components/DrinksGrid"
+import { DrinksGrid } from "../components/DrinksGrid";
+import Footer from "../components/Footer";
 
-export const LandingPage = () =>{
-    return (
-        <DrinksGrid />
-    )
-}
+
+export const LandingPage = () => {
+  return (
+    <>
+      <DrinksGrid />
+      <Footer />
+    </>
+  );
+};
