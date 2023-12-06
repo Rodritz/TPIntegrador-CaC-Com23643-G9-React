@@ -11,7 +11,7 @@ export const DrinksGrid = () => {
 
     
     useEffect(() => {
-        get("/search.php?f=a")
+        get("/filter.php?c=Ordinary_Drink")
           .then((data) => {
             setDrinks(data.drinks);
           })

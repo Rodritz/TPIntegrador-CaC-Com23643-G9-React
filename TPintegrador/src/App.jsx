@@ -3,14 +3,14 @@ import "./app.css";
 import { LandingPage } from "./pages/LandingPage";
 import { DetalleTragos } from "./pages/DetalleTragos";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Navbar from "./components/NavBar"; 
+import NavBar from "./components/NavBar"; 
 import {Footer} from "./components/Footer";
 
 export const App = () => {
 
     return (
         <BrowserRouter>
-            <Navbar /> 
+            <NavBar /> 
             <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/drink/:idDrink" element={<DetalleTragos />} />
