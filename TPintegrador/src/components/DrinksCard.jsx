@@ -3,6 +3,7 @@ import "./DrinksCard.css";
 
 
 
+
 export const DrinksCard = ({drink}) => {
 
     const imgURL = drink.strDrinkThumb;
