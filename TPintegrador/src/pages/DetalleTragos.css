@@ -53,3 +53,34 @@
     opacity: 60%;
     filter: blur(4px);
 }
+
+@media(max-width: 560px){
+
+    .backgroundImage{
+        visibility: hidden;
+    }
+    
+    .tragoDetalle {
+
+        margin-top: 450px;
+        margin-right: 0px;
+
+    
+        
+    }
+    
+
+    .imagenDrink {
+        width: 90%;
+        height: auto;
+        margin-right: 0px;
+
+    }
+
+    .marg_footer {
+        margin-top: 35rem;
+
+    }
+}
+    
+
