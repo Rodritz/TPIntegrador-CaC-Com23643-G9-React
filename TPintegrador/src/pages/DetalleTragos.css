@@ -15,7 +15,7 @@
 }
 
 .imagenDrink {
-    margin-top: 50px;
+    margin-top: 5px;
     margin-right: 500px;
 }
 
@@ -24,13 +24,16 @@
     font-size: 1rem;
     padding: 50px 15px;
     color: white;
-    margin-top: 55px;
+    margin-top: 5px;
     margin-right: -500px;
     border: 1px solid white;
     width: 490px;
     height: 290px;
     text-align: justify;
     text-justify: inter-word;
+    height:auto;
+    background-color: rgba(30, 30, 30, 0.8)
+
     
 }
 
