@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { getDoc, deleteDoc, doc, updateDoc } from "firebase/firestore";
+import { getDoc, doc, updateDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig/firebase.js";
 
 
@@ -23,11 +23,12 @@ const update = async(e) => {
         nombre: nombre,
         ingredientes: ingredientes,
         instrucciones: instrucciones,
-        categoria: categoria
+        categoria: categoria,
     };
 
-    await updateDoc (tragoDoc, data)
-    navigate ("/show") //en la de tragos poner /show
+    await updateDoc(tragoDoc, data);
+    navigate("/"); 
+}
 
     const getTragosById = async (id) =>{
         const tragoDoc = await getDoc (doc(db, "tragos", id));
@@ -38,10 +39,9 @@ const update = async(e) => {
             setInstrucciones(tragoDoc.data().instrucciones);
             setCategoria(tragoDoc.data().categoria);
         }else{
-            alert("No existe el dato");
+            console.log("No existe el dato");
         }
-    }
-};
+    };
 
     // Use Effect
     useEffect(() => {
@@ -49,8 +49,12 @@ const update = async(e) => {
     }, []);
 
     return (
-        <h1>Aca se van a editar los documentos</h1>
+        <div className="container">
+            <div className="row">
+                <div className="col">
+                    <h1>Edit Heroe</h1>
+                </div>
+            </div>
+        </div>
     )
-
-
-}
+};

@@ -86,7 +86,7 @@ export const Show = () => {
                                         <td>{trago.instrucciones}</td>
                                         <td>{trago.categoria}</td>
                                         <td>
-                                            <Link to={`edit/${trago.id}`} className="btn btn-light">
+                                            <Link to={`/show/edit/${trago.id}`} className="btn btn-light">
                                                 <i className="fa-sharp fa-solid fa-pencil"></i>
                                             </Link>                      
                                             <button className="btn btn-danger" onClick={() => confirmDelete(trago.id)}>
