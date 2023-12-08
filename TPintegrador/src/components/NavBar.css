@@ -8,7 +8,6 @@
     color:aliceblue;
 }
 
-
 .bg-body-tertiary {
     background-color: rgba(30, 30, 30, 0.2) !important; /* Change the last value (0.7) for the desired transparency level */
   }
@@ -35,9 +34,6 @@
     margin-bottom: 20px; 
   }
 
-#navbarScrollingDropdown{
-  color:aliceblue;
-}
   
   
   

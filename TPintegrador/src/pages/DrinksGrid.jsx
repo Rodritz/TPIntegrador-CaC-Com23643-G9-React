@@ -1,17 +1,17 @@
-import { DrinksCard } from "./DrinksCard";
-/* import drinks from "../data/tragos.json" */
+import { DrinksCard } from "../components/DrinksCard";
 import "./DrinksGrid.css";
 import { get } from "../../utils/httpCliente";
 import { useState, useEffect } from "react";
 
-export const DrinksGrid = ({ searchResults }) => {
+
+export const DrinksGrid = ({ searchResults, routePath  }) => {
   const [drinks, setDrinks] = useState([]);
 
   useEffect(() => {
     if (searchResults.length > 0) {
       setDrinks(searchResults);
     } else {
-      get("/filter.php?c=Ordinary_Drink")
+      get(routePath)
         .then((data) => {
           setDrinks(data.drinks);
         })

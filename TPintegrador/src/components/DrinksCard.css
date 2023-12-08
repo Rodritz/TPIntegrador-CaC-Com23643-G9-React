@@ -1,20 +1,14 @@
 .drinksCard{
-    
     text-align: center;
     background-color: rgba(255, 255, 255, 35%);
     border-radius: 10px;
     width: 240px;
     height: 270px;
     box-shadow: 10px 5px 5px black;
-
-
-    
-
 }
 
 .drinksCardLink{
     text-decoration: none;
-
 }
 
 .drinksName{
@@ -22,7 +16,6 @@
     font-size: 1rem;
     color: rgba(255, 255, 255);
     text-decoration: none;
-
 }
 
 li{
@@ -32,7 +25,6 @@ li{
 
 .drinksCard:hover{
     transform:scale(1.05);
-    
 }
 
 .drinkImage{
@@ -40,8 +32,6 @@ li{
     border-radius: 10px;
     width: 230px;
     height: 230px;
-
-    
 }
 
 

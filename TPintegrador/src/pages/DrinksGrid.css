@@ -9,8 +9,6 @@
     
 }
 
-
-
 @media (max-width:560px){
     .drinksGrid{
         grid-template-columns: 100%;

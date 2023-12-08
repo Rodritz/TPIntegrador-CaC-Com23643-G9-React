@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import SearchContext from "../components/SearchContext";
-import { DrinksGrid } from "../components/DrinksGrid";
+import { DrinksGrid } from "./DrinksGrid";
 
 export const LandingPage = () => {
   const { searchResults } = useContext(SearchContext);
@@ -8,6 +8,7 @@ export const LandingPage = () => {
   return (
     <>
       <DrinksGrid searchResults = {searchResults}/>
-    </>
+    </> 
   );
 };
+

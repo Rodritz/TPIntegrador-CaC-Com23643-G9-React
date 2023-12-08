@@ -1,9 +1,9 @@
 import { get } from "../../utils/httpCliente";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "./DetalleTragos.css";
+import "./DrinkDetails.css";
 
-export const DetalleTragos = () => {
+export const DrinkDetails = (props) => {
   const [drink, setDrink] = useState(null);
   const { idDrink } = useParams();
 
