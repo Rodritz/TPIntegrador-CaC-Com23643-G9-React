@@ -27,7 +27,7 @@ const update = async(e) => {
     };
 
     await updateDoc(tragoDoc, data);
-    navigate("/"); 
+    navigate("/show"); 
 }
 
     const getTragosById = async (id) =>{
@@ -52,9 +52,33 @@ const update = async(e) => {
         <div className="container">
             <div className="row">
                 <div className="col">
-                    <h1>Edit Heroe</h1>
+                    <h1>EDITAR TRAGO</h1>
+                    <form onSubmit={update}>
+                        <div className="mb-3">
+                            <label className="form-label">NOMBRE</label>
+                            <input className="form-control" type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+                        </div>
+
+                        <div className="mb-3">
+                            <label className="form-label">INGREDIENTES</label>
+                            <input className="form-control" type="text" value={ingredientes} onChange={(e) => setIngredientes(e.target.value)} />
+                        </div>
+
+                        <div className="mb-3">
+                            <label className="form-label">INSTRUCCIONES</label>
+                            <input className="form-control" type="text" value={instrucciones} onChange={(e) => setInstrucciones(e.target.value)} />
+                        </div>
+
+                        <div className="mb-3">
+                            <label className="form-label">CATEGORIA</label>
+                            <input className="form-control" type="text" value={categoria} onChange={(e) => setCategoria(e.target.value)} />
+                        </div>
+
+                        <button type="submit" className="btn btn-secondary">EDITAR</button>
+                    </form>
                 </div>
             </div>
         </div>
+
     )
 };
