@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./app.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-/* import { LandingPage } from "./pages/LandingPage"; */
+import { LandingPage } from "./pages/LandingPage";
 import { DrinkDetails } from "./pages/DrinkDetails";
 import NavBar from "./components/NavBar";
 import { Footer } from "./components/Footer";
@@ -16,9 +16,9 @@ export const App = () => {
     <BrowserRouter>
       <SearchContext.Provider value={{ searchResults, setSearchResults }}>
         <NavBar />
-        <Routes>
-          <Route path="/" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?i=Gin" />} />
-          {/* <Route path="/" element={<LandingPage />} /> */}
+        <Routes>          
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?i=Gin"/>} />
           <Route path="/alcoholic" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?a=Alcoholic"/>} />
           <Route path="/nonAlcoholic" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?a=Non_Alcoholic"/>} />  
           <Route path="/ordinaryDrink" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?c=Ordinary_Drink"/>} /> 

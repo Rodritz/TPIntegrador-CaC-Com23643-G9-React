@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./DrinkDetails.css";
 
-export const DrinkDetails = (props) => {
+export const DrinkDetails = () => {
   const [drink, setDrink] = useState(null);
   const { idDrink } = useParams();
 
