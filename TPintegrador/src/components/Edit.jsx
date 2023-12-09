@@ -75,6 +75,7 @@ const update = async(e) => {
                         </div>
 
                         <button type="submit" className="btn btn-secondary">EDITAR</button>
+                        <Link to={"/show"} className="btn btn-danger">CANCEL</Link>
                     </form>
                 </div>
             </div>

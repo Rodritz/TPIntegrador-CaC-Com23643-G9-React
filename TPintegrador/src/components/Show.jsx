@@ -62,7 +62,7 @@ export const Show = () => {
                 <div className="row">
                     <div className="col">
                         <div className="d-grid gap-2">
-                            <Link to="/create" className="btn btn-secondary">CREAR</Link>
+                            <Link to="/show/create" className="btn btn-secondary">CREAR</Link>
                         </div>
 
                         <table className="table table-dark table-hover">
