@@ -8,6 +8,7 @@ import { Footer } from "./components/Footer";
 import { useState } from "react";
 import SearchContext from "./components/SearchContext";
 import { DrinksGrid } from "./pages/DrinksGrid";
+import { FormSubs } from "./pages/FormSubs";
 
 export const App = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -18,6 +19,8 @@ export const App = () => {
         <NavBar />
         <Routes>
           <Route path="/" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?i=Gin" />} />
+          <Route path="/FormSubs" element={<FormSubs/>} />
+
           {/* <Route path="/" element={<LandingPage />} /> */}
           <Route path="/alcoholic" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?a=Alcoholic"/>} />
           <Route path="/nonAlcoholic" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?a=Non_Alcoholic"/>} />  

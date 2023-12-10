@@ -18,6 +18,23 @@ git clone https://github.com/Rodritz/TPIntegrador-CaC-Com23643-G9-React.git
 ```bash
 npm install
 ```
+## Instalar bootStrap
+
+```bash
+npm install ract-bootstrap bootstrap
+```
+
+## Instalar React Hook Form
+
+```bash
+npm install react-hook-form
+```
+
+## Instalar Sweet Alert 2
+
+```bash
+npm install sweetalert2
+```
 
 ## Inicar el servidor de desarrollo 
 
