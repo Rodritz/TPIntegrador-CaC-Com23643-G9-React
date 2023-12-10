@@ -46,10 +46,10 @@ const update = async(e) => {
     // Use Effect
     useEffect(() => {
         getTragosById(id);
-    }, []);
+    }, [id]);
 
     return (
-        <div className="container">
+        <div className="container ">
             <div className="row">
                 <div className="col">
                     <h1>EDITAR TRAGO</h1>

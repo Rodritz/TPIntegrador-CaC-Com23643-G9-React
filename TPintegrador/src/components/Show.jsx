@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-key */
+import "./show.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -8,6 +9,8 @@ import { db } from "../firebaseConfig/firebase.js"
 import Swal from "sweetalert2"
 import withReactContent from "sweetalert2-react-content"
 const mySwal = withReactContent(Swal)
+
+
 
 export const Show = () => {
 
@@ -54,22 +57,21 @@ export const Show = () => {
     // Use Effect
     useEffect(() => {
         getTragos()
-    }, [])
+    }, []);
 
     return (
         <>
-            <div className="container">
+            <div className="container-fluid tabla-misTragos">
                 <div className="row">
                     <div className="col">
                         <div className="d-grid gap-2">
-                            <Link to="/show/create" className="btn btn-secondary">CREAR</Link>
+                            <Link to="/show/create" className="btn btn-secondary">AGREGAR TRAGO</Link>
                         </div>
 
                         <table className="table table-dark table-hover">
                             <thead>
                                 <tr>
                                     <th>NOMBRE</th>
-
                                     <th>INGREDIENTES</th>
                                     <th>INSTRUCCIONES</th>
                                     <th>CATEGORIA</th>

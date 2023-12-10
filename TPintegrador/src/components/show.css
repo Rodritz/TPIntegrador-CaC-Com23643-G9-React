@@ -1,0 +1,21 @@
+.tabla-misTragos {
+    margin: 0 25% 75%;
+}
+
+@media(max-width: 560px) {
+
+    .tabla-misTragos {
+        margin: 0 -5px;
+
+    }
+
+    .table{
+
+        font-size: 0.70rem;
+    }
+
+    .marg_footer{
+        margin-top: 150%;
+    }
+
+}
