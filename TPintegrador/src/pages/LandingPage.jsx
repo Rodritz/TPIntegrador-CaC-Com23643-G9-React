@@ -1,11 +1,23 @@
-import { DrinksGrid } from "../components/DrinksGrid";
-import {  Link } from "react-router-dom";
+/* import { useContext } from 'react'
+import SearchContext from "../components/SearchContext"; */
+import "./LandingPage.css";
+
+
 
 export const LandingPage = () => {
+  /* const { searchResults } = useContext(SearchContext); */ 
+
+  
   return (
-    <>
-      <DrinksGrid />
-      <Link to="/show" className="btn btn-secondary">MIS TRAGOS</Link>
-    </>
-  );
-};
+    <div className="containerNeon">
+      <h1 className="neon">•. Welcome to .•</h1>
+      <p className="neon2">Cocktails!</p>
+      <p className="neon3">
+        <span className="flicker1">★</span>
+        <span className="flicker2">★</span>
+        <span className="flicker3">★</span>
+      </p>
+    </div>
+  )
+}
+

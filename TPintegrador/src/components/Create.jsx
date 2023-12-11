@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig/firebase.js";
+import "./Edit.css"
 
 
 
@@ -30,7 +31,7 @@ export const Create = () => {
 
 
     return (
-        <div className="container">
+        <div className="container edit_container">
             <div className="row">
                 <div className="col">
                     <h1>CREAR TRAGO</h1>

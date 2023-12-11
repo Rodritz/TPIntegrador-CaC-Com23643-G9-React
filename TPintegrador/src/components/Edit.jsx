@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { getDoc, doc, updateDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig/firebase.js";
+import "./Edit.css";
 
 
 export const Edit = () => {
@@ -49,7 +50,7 @@ const update = async(e) => {
     }, [id]);
 
     return (
-        <div className="container ">
+        <div className="container edit_container">
             <div className="row">
                 <div className="col">
                     <h1>EDITAR TRAGO</h1>

@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import "./show.css";
+import "./Show.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -61,12 +61,11 @@ export const Show = () => {
 
     return (
         <>
+        <h1>MIS TRAGOS</h1>
             <div className="container-fluid tabla-misTragos">
+                
                 <div className="row">
                     <div className="col">
-                        <div className="d-grid gap-2">
-                            <Link to="/show/create" className="btn btn-secondary">AGREGAR TRAGO</Link>
-                        </div>
 
                         <table className="table table-dark table-hover">
                             <thead>

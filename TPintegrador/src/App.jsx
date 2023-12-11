@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./app.css";
+import "./App.css";
 import { LandingPage } from "./pages/LandingPage";
 import { DetalleTragos } from "./pages/DetalleTragos";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
