@@ -30,6 +30,7 @@ export const Show = () => {
     const deleteTragos = async (id) => {
         const tragosDoc = doc(db, "tragos", id)
         await deleteDoc(tragosDoc)
+       
     }
 
     // Funcion para sweetalert2 (confirmar/eliminar documento)
@@ -57,7 +58,7 @@ export const Show = () => {
     // Use Effect
     useEffect(() => {
         getTragos()
-    }, []);
+    }, [tragos]);
 
     return (
         <>
