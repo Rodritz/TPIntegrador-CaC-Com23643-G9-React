@@ -38,7 +38,7 @@ export const Formulario = () => {
     return (
         
         <div className="containerForm">
-    <h2>Formulario</h2>
+    <h2>Suscribite para recibir novedades</h2>
    
     <form className="mi-formulario  justify-content-center" onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">

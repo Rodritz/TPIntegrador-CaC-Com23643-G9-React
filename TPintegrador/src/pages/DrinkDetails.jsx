@@ -53,7 +53,7 @@ export const DrinkDetails = () => {
         </p>
         <p>
           <strong>Instrucciones</strong><br/>
-          {drink.strInstructionsES}
+          {drink.strInstructions}
         </p>
         <p>
           <strong>Ingredientes</strong><br/>
