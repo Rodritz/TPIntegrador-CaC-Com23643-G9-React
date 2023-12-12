@@ -5,7 +5,7 @@ import Brand from "../img/svg/logo-no-background.svg";
 import "../components/NavBar.css";
 import SearchContext from "./SearchContext";
 
-function NavBar() {
+export const NavBar = () => {
   const { searchResults, setSearchResults } = useContext(SearchContext);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -56,9 +56,14 @@ function NavBar() {
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/cocktailGlass">Cocktail glass</NavDropdown.Item>
                 <NavDropdown.Item href="/champagneFlute">Champagne flute</NavDropdown.Item>
-              </NavDropdown>
+              </NavDropdown>              
               <Nav.Link href="/suscribe" >Suscribe</Nav.Link>
               <Nav.Link href="/members" >Members</Nav.Link>
+              <NavDropdown title="Create your list" id="navbarScrollingDropdown">                
+                <NavDropdown.Item href="/create">Create</NavDropdown.Item>
+                <NavDropdown.Item href="/edit/:id">Edit</NavDropdown.Item>
+                <NavDropdown.Item href="/show">Show</NavDropdown.Item>                
+              </NavDropdown>
             </Nav>
             <Form
               className="d-flex"
@@ -86,4 +91,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+
