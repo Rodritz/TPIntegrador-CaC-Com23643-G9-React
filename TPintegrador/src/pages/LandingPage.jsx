@@ -5,8 +5,7 @@ import "./LandingPage.css";
 
 
 export const LandingPage = () => {
-  /* const { searchResults } = useContext(SearchContext); */ 
-
+  
   
   return (
     <div className="containerNeon">

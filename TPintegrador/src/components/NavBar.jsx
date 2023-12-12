@@ -4,10 +4,13 @@ import { Button, Container, Form, Nav, Navbar, NavDropdown,} from "react-bootstr
 import Brand from "../img/svg/logo-no-background.svg";
 import "../components/NavBar.css";
 import SearchContext from "./SearchContext";
+import { DrinksGrid } from "../pages/DrinksGrid";
 
 function NavBar() {
   const { searchResults, setSearchResults } = useContext(SearchContext);
   const [searchTerm, setSearchTerm] = useState("");
+  const [showSearchResults, setShowSearchResults] = useState(false);
+
 
   const handleSearch = async () => {
     try {
@@ -20,8 +23,19 @@ function NavBar() {
       }
 
       const data = await response.json();
+      console.log(data)
       setSearchResults(data.drinks || []);
       setSearchTerm(""); // Clear the search bar after search
+      const currentPath = window.location.pathname;
+    const showDrinksGridPages = ["/home", "/alcoholic", "/nonAlcoholic", "/ordinaryDrink", "/cocktail", "/cocktailGlass", "/champagneFlute"];
+    if (showDrinksGridPages.includes(currentPath)) {
+      setShowSearchResults(false);
+    } else {
+      setShowSearchResults(true);
+      
+      }
+      
+
     } catch (error) {
       console.error("Error searching for cocktails:", error);
       setSearchResults([]);
@@ -82,6 +96,7 @@ function NavBar() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      {showSearchResults && <DrinksGrid searchResults={searchResults} routePath="/" />}     
     </div>
   );
 }

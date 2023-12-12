@@ -8,6 +8,8 @@ import { Footer } from "./components/Footer";
 import { useState } from "react";
 import SearchContext from "./components/SearchContext";
 import { DrinksGrid } from "./pages/DrinksGrid";
+import { FormSubs } from "./pages/FormSubs";
+import { Members } from "./pages/Members";
 
 export const App = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -16,8 +18,9 @@ export const App = () => {
     <BrowserRouter>
       <SearchContext.Provider value={{ searchResults, setSearchResults }}>
         <NavBar />
-        <Routes>          
-          <Route path="/" element={<LandingPage searchResults={searchResults} />} />
+        <Routes>       
+          
+          <Route path="/" element={<LandingPage searchResults={searchResults} />} /> 
           <Route path="/home" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?i=Gin"/>} />
           <Route path="/alcoholic" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?a=Alcoholic"/>} />
           <Route path="/nonAlcoholic" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?a=Non_Alcoholic"/>} />  
@@ -25,7 +28,10 @@ export const App = () => {
           <Route path="/cocktail" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?c=Cocktail"/>} /> 
           <Route path="/cocktailGlass" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?g=Cocktail_glass"/>} /> 
           <Route path="/champagneFlute" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?g=Champagne_flute"/>} /> 
-          <Route path="/drink/:idDrink" element={<DrinkDetails />} />          
+          <Route path="/drink/:idDrink" element={<DrinkDetails />} />  
+          <Route path="/Members" element={<Members/>} />
+          <Route path="/suscribe" element={<FormSubs/>} />
+          
         </Routes>
         <Footer />
       </SearchContext.Provider>
