@@ -1,3 +1,4 @@
+//rfce =>atajo para la creacion del componente
 import { DrinksCard } from "../components/DrinksCard";
 import "./DrinksGrid.css";
 import { get } from "../../utils/httpCliente";
