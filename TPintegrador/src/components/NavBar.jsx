@@ -46,8 +46,7 @@ function NavBar() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="/home">Home</Nav.Link>
-              {/* <Nav.Link href="#action2">Link</Nav.Link> */}
+              <Nav.Link href="/home">Home</Nav.Link>              
               <NavDropdown title="Filter" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="/alcoholic">Alcoholic</NavDropdown.Item>
                 <NavDropdown.Item href="/nonAlcoholic">Non Alcoholic</NavDropdown.Item>
@@ -58,7 +57,8 @@ function NavBar() {
                 <NavDropdown.Item href="/cocktailGlass">Cocktail glass</NavDropdown.Item>
                 <NavDropdown.Item href="/champagneFlute">Champagne flute</NavDropdown.Item>
               </NavDropdown>
-              {/* <Nav.Link href="#" disabled>Link</Nav.Link> */}
+              <Nav.Link href="/suscribe" >Suscribe</Nav.Link>
+              <Nav.Link href="/members" >Members</Nav.Link>
             </Nav>
             <Form
               className="d-flex"

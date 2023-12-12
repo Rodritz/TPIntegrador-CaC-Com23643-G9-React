@@ -17,7 +17,7 @@ export const App = () => {
       <SearchContext.Provider value={{ searchResults, setSearchResults }}>
         <NavBar />
         <Routes>          
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<LandingPage searchResults={searchResults} />} />
           <Route path="/home" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?i=Gin"/>} />
           <Route path="/alcoholic" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?a=Alcoholic"/>} />
           <Route path="/nonAlcoholic" element={<DrinksGrid searchResults={searchResults} routePath="/filter.php?a=Non_Alcoholic"/>} />  
