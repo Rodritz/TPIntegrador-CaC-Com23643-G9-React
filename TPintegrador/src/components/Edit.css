@@ -1,18 +1,31 @@
-.edit_container{
-    margin: 0 35% 50%;    
-}
-.form-label{
-    color: aliceblue;
-}
-
-h1{
-    color: white;
+.edit_container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
 }
 
-
-@media(max-width: 560px) {
-
-    .edit_container {
-        margin: 0 5%;
-    }
+.row {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
+.form-label {
+  color: aliceblue;
+}
+
+h1 {
+  color: white;
+}
+
+.btn-edit-create {
+  display: flex;
+  gap: 15px;
+  justify-content: right;
+  padding: 20px 0;
+}
+
+/* @media (max-width: 560px) {
+  .edit_container {
+    margin: 0 5%;
+  }
+} */

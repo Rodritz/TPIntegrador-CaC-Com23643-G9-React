@@ -1,12 +1,27 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  text-align: center;
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #000; /* Change to the desired shade of grey */
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
 }
 
+#root {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
 
+#app {
+  max-width: 1920px;
+  position: relative;
+  width: 100%;
+}
 
-.title{
+.title {
   text-transform: uppercase;
   color: black;
   margin-bottom: -40px;
@@ -38,10 +53,4 @@
 
 .read-the-docs {
   color: #888;
-}
-
-body {
-  background-color: black !important; /* Change to the desired shade of grey */
-  margin: 0; /* Reset default margin */
-  padding: 0; /* Reset default padding */
 }
