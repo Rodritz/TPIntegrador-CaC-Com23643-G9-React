@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, Container, Form, Nav, Navbar, NavDropdown,} from "react-bootstrap";
 import Brand from "../img/svg/logo-no-background.svg";
-import "../components/NavBar.css";
+import "./NavBar.css";
 import SearchContext from "./SearchContext";
 
 export const NavBar = () => {
