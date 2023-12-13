@@ -1,12 +1,8 @@
-/* import { useContext } from 'react'
-import SearchContext from "../components/SearchContext"; */
 import "./LandingPage.css";
 
 
 
-export const LandingPage = () => {
-  /* const { searchResults } = useContext(SearchContext); */ 
-
+export const LandingPage = () => {  
   
   return (
     <div className="containerNeon">

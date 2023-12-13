@@ -1,18 +1,13 @@
-body {
-    background: black;
-  }
-  
+
   .containerNeon {
     border: 2px solid white;
     box-shadow: inset 0 0 5px red, 0 0 10px red;
     border-radius: 60px;
-    max-width: 600px;
-    margin: auto;
-    margin-top: 140px;
-    margin-bottom: 140px;
+    max-width: 600px;    
+    margin: 150px auto 200px;
     padding: 50px;
     text-align: center;
-    color: white;
+    color: white; 
   }
   
   .neon {

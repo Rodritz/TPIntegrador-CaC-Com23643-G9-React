@@ -2,12 +2,11 @@
     background-color: black;
     color: white;
     font-family: 'Arial', sans-serif;
-    margin: 40px 0 0px;
     display: flex;
     flex-direction: column; 
-    justify-content:start;
+    justify-content:center;
     align-items: center ;
-    height: 70vh;
+    height: 90vh;
     } 
     
     .mi-formulario {
@@ -20,7 +19,8 @@
     }
     
     h2 {
-      
+      color: #3498db;
+      margin-bottom: 30px;
     }
     
     .campo {

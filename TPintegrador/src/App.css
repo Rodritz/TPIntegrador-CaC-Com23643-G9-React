@@ -45,3 +45,7 @@ body {
   margin: 0; /* Reset default margin */
   padding: 0; /* Reset default padding */
 }
+
+.containerFooter{
+  margin: 0 30px;
+}

@@ -25,7 +25,6 @@ export const Formulario = () => {
         background: "#36354a",
     }).then((result) => {
         if (result.isConfirmed) {
-            // Redirigir a la página deseada
             navigate('/');
         }
     });
