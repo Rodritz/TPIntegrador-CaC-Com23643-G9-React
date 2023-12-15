@@ -73,7 +73,7 @@ export const Show = () => {
   
               <tbody>
                 {tragos.map((trago) => (
-                  <tr>
+                  <tr key={trago.id}>
                     <td>{trago.nombre}</td>
                     <td>{trago.ingredientes}</td>
                     <td>{trago.instrucciones}</td>
