@@ -61,7 +61,6 @@ export const NavBar = () => {
               <Nav.Link href="/members" >Members</Nav.Link>
               <NavDropdown title="Create your list" id="navbarScrollingDropdown">                
                 <NavDropdown.Item href="/create">Create</NavDropdown.Item>
-                <NavDropdown.Item href="/edit/:id">Edit</NavDropdown.Item>
                 <NavDropdown.Item href="/show">Show</NavDropdown.Item>                
               </NavDropdown>
             </Nav>
